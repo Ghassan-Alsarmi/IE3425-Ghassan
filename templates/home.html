@@ -1,0 +1,20 @@
+<!-- home.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Home</title>
+</head>
+<body class="home">
+    <h1>Home Page</h1>
+    <nav>
+        <a href="{{ url_for('customers') }}">Customers</a>
+        <a href="{{ url_for('products') }}">Products</a>
+    </nav>
+    <p>Welcome to the Home page! Explore the options above.</p>
+    <footer>&copy; 2023 Ghassan Company</footer>
+</body>
+</html>

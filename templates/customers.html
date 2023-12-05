@@ -1,0 +1,22 @@
+<!-- customers.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Customers</title>
+</head>
+<body class="customers">
+    <nav>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('add_customer') }}">Add Customer</a>
+    </nav>
+    <h1>Customers Page</h1>
+    <div class="container">
+        <p>Explore and add customer information.</p>
+    </div>
+    <footer>&copy; 2023 Ghassan Company</footer>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!-- get_product.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Get Product</title>
+    <style>
+        /* Custom styling for images */
+        .image-container {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 20px;
+        }
+
+        .product-image {
+            width: 150px; 
+            height: auto;
+            margin-right: 10px; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Get Product Page</h1>
+
+    <form method="post" action="{{ url_for('get_product') }}">
+        <label for="product_id">Product ID:</label>
+        <input type="text" id="product_id" name="product_id" required>
+        <input type="submit" value="Get Product">
+    </form>
+
+    <div class="image-container">
+        <img src="../static/ProductsImage1.png" alt="Products Image 1" class="product-image">
+        <img src="../static/ProductsImage2.png" alt="Products Image 2" class="product-image">
+    </div>
+
+    {% if product_details %}
+        <h2>Product Details</h2>
+        <p><strong>Product ID:</strong> {{ product_details[0] }}</p>
+        <p><strong>Product Name:</strong> {{ product_details[1] }}</p>
+        <p><strong>Product Description:</strong> {{ product_details[2] }}</p>
+        <p><strong>Product Price:</strong> {{ product_details[3] }}</p>
+        <p><strong>Product Inventory:</strong> {{ product_details[4] }}</p>
+        <p><strong>Product Vendor:</strong> {{ product_details[5] }}</p>
+    {% endif %}
+
+    <a href="{{ url_for('home') }}">Home</a>
+</body>
+</html>

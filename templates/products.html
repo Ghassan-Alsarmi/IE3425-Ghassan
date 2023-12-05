@@ -1,0 +1,22 @@
+<!-- products.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Products</title>
+</head>
+<body class="products">
+    <nav>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('get_product') }}">Get Product</a>
+    </nav>
+    <h1>Products Page</h1>
+    <div class="container">
+        <p>Explore and manage product information.</p>
+    </div>
+    <footer>&copy; 2023 Ghassan Company</footer>
+</body>
+</html>
